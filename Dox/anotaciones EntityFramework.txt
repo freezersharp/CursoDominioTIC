@@ -1,0 +1,11 @@
+freezersharp.database.windows.net
+freezersharp
+paolit0!
+
+Server=freezersharp.database.windows.net;initial catalog=CursoDominioTIC;user id=freezersharp;password=paolit0!;MultipleActiveResultSets=True;
+
+
+dotnet tool install --global dotnet-ef
+
+
+dotnet ef dbcontext scaffold "Server=freezersharp.database.windows.net;initial catalog=CursoDominioTIC;user id=freezersharp;password=paolit0!;" Microsoft.EntityFrameworkCore.SqlServer -o Entities/Models -f -c "CursoDominioTICContext" --project "CursoDominioTIC.API"

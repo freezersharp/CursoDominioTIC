@@ -13,6 +13,11 @@ namespace CursoDominioTIC.API.Controllers
         private CursoDominioTICContext _context = new CursoDominioTICContext();
         private UnitOfWork _unitOfWork = new UnitOfWork(new CursoDominioTICContext());
 
+        /// <summary>
+        /// Servicio que retorna los productos en base al ID del establecimiento
+        /// </summary>
+        /// <param name="idEstablecimiento">ID del establecimiento</param>
+        /// <returns>JSON con la lista de productos del establecimiento consultado.</returns>
         [HttpGet("idEstablecimiento")]
         public IActionResult GetProductos(int idEstablecimiento)
         {
@@ -48,6 +53,11 @@ namespace CursoDominioTIC.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Servicio que retorna el producto en base a su ID
+        /// </summary>
+        /// <param name="id">ID del Producto</param>
+        /// <returns>Producto</returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -62,6 +72,12 @@ namespace CursoDominioTIC.API.Controllers
             }
 
         }
+
+        /// <summary>
+        /// Servicio que crea un Producto
+        /// </summary>
+        /// <param name="producto">JSON del Producto</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult InsertProducto([FromBody] Producto producto)
         {
@@ -81,6 +97,12 @@ namespace CursoDominioTIC.API.Controllers
             return BadRequest(producto);
         }
 
+        /// <summary>
+        /// Servicio que actualiza un producto
+        /// </summary>
+        /// <param name="id">ID del Producto</param>
+        /// <param name="producto">JSON del Producto</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public IActionResult UpdateProducto([FromRoute] int id, [FromBody] Producto producto)
         {
@@ -105,6 +127,11 @@ namespace CursoDominioTIC.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Servicio que elimina un producto en base a su ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult DeleteProducto(int id)
         {

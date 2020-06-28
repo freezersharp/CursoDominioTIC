@@ -12,6 +12,10 @@ namespace CursoDominioTIC.API.Controllers
         private CursoDominioTICContext _context = new CursoDominioTICContext();
         private UnitOfWork _unitOfWork = new UnitOfWork(new CursoDominioTICContext());
 
+        /// <summary>
+        /// Servicio que obtiene todos los establecimientos
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult GetAllEstablecimientos()
         {
@@ -26,6 +30,12 @@ namespace CursoDominioTIC.API.Controllers
                 return Ok();
             }
         }
+
+        /// <summary>
+        /// Servicio que retorna el establecimiento en base a su ID
+        /// </summary>
+        /// <param name="id">ID del Establecimiento</param>
+        /// <returns>Establecimiento</returns>
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -40,6 +50,12 @@ namespace CursoDominioTIC.API.Controllers
             }
 
         }
+
+        /// <summary>
+        /// Servicio que agrega el Establecimiento
+        /// </summary>
+        /// <param name="establecimiento">JSON del Establecimiento</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult InsertEstablecimiento([FromBody] Establecimiento establecimiento)
         {
@@ -59,6 +75,12 @@ namespace CursoDominioTIC.API.Controllers
             return BadRequest(establecimiento);
         }
 
+        /// <summary>
+        /// Servicio que actualiza el establecimiento 
+        /// </summary>
+        /// <param name="id">ID del establecimiento</param>
+        /// <param name="establecimiento">JSON del establecimiento</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public IActionResult UpdateEstablecimiento([FromRoute]int id, [FromBody] Establecimiento establecimiento)
         {
@@ -83,6 +105,11 @@ namespace CursoDominioTIC.API.Controllers
             }
         }
 
+        /// <summary>
+        /// Servicio que elimina el Establecimiento en base a su ID
+        /// </summary>
+        /// <param name="id">ID del Establecimiento</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult DeleteEstablecimiento(int id)
         {

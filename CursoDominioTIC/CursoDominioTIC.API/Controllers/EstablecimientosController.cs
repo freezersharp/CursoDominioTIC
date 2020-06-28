@@ -2,10 +2,11 @@
 using CursoDominioTIC.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using CursoDominioTIC.Common.Helpers;
 
 namespace CursoDominioTIC.API.Controllers
 {
-    [Route("api/v1/CursoDominioTIC/[controller]")]
+    [Route(Parametros.URLServices)] //prefiero usar URL cortas
     public class EstablecimientosController : Controller
     {
         private CursoDominioTICContext _context = new CursoDominioTICContext();
@@ -25,7 +26,7 @@ namespace CursoDominioTIC.API.Controllers
                 return Ok();
             }
         }
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
             Establecimiento establecimiento = _unitOfWork.Establecimientos.GetById(id);
@@ -82,7 +83,7 @@ namespace CursoDominioTIC.API.Controllers
             }
         }
 
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public IActionResult DeleteEstablecimiento(int id)
         {
             try

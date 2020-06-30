@@ -47,7 +47,6 @@ namespace CursoDominioTIC.API
             //        .AddFilter(DbLoggerCategory.Database.Command.Name, LogLevel.Information);
             //    loggingBuilder.AddDebug();
             //});
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -40,6 +41,13 @@ namespace CursoDominioTIC.API
                 options.SerializerSettings.Formatting = Formatting.Indented;
                 options.SerializerSettings.ContractResolver = contract;
             });
+
+            //services.AddLogging(loggingBuilder => {
+            //    loggingBuilder.AddConsole()
+            //        .AddFilter(DbLoggerCategory.Database.Command.Name, LogLevel.Information);
+            //    loggingBuilder.AddDebug();
+            //});
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -1,0 +1,29 @@
+[
+  {
+    "IdEstablecimiento": 1,
+    "Nombre": "Wendy's",
+    "Descripcion": "Hamburguesas Wendy's.",
+    "Calificacion": 0.00,
+    "Favorito": [],
+    "Opinion": [],
+    "Producto": []
+  },
+  {
+    "IdEstablecimiento": 2,
+    "Nombre": "Burger King",
+    "Descripcion": "Burger King.",
+    "Calificacion": 0.00,
+    "Favorito": [],
+    "Opinion": [],
+    "Producto": []
+  },
+  {
+    "IdEstablecimiento": 3,
+    "Nombre": "Pizza Hut",
+    "Descripcion": "Pizza Hut.",
+    "Calificacion": 0.00,
+    "Favorito": [],
+    "Opinion": [],
+    "Producto": []
+  }
+]

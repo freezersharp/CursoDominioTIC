@@ -81,22 +81,23 @@ namespace CursoDominioTIC.API.Controllers
         /// <param name="id">ID del establecimiento</param>
         /// <param name="establecimiento">JSON del establecimiento</param>
         /// <returns></returns>
-        [HttpPut("{id}")]
-        public IActionResult UpdateEstablecimiento([FromRoute]int id, [FromBody] Establecimiento establecimiento)
+        //[HttpPut("{id}")]
+        //[FromRoute]int id, 
+        public IActionResult UpdateEstablecimiento([FromBody] Establecimiento establecimiento)
         {
             try
             {
-                Establecimiento estab = _unitOfWork.Establecimientos.GetById(id);
-                if (estab != null)
-                {
+                //Establecimiento estab = _unitOfWork.Establecimientos.GetById(id);
+                //if (estab != null)
+                //{
                     if (ModelState.IsValid)
                     {
                         _unitOfWork.Establecimientos.Update(establecimiento);
                         _unitOfWork.Save();
-                        return Ok();
+                        return Ok(establecimiento);
                     }
-                }
-                else return NotFound("No se encuentra el establecimiento.");
+                //}
+                //else return NotFound("No se encuentra el establecimiento.");
                 return BadRequest();
             }
             catch (DataException ex)

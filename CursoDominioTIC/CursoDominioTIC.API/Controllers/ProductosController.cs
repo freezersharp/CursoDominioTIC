@@ -14,6 +14,25 @@ namespace CursoDominioTIC.API.Controllers
         private UnitOfWork _unitOfWork = new UnitOfWork(new CursoDominioTICContext());
 
         /// <summary>
+        /// Servicio que retorna TODOS los productos.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult GetAllProductos()
+        {
+            //var establecimientos = _unitOfWork.Establecimientos.Get(null, null, "Producto");
+            var productos = _unitOfWork.Productos.Get();
+            if (productos != null)
+            {
+                return Ok(productos);
+            }
+            else
+            {
+                return Ok();
+            }
+        }
+
+        /// <summary>
         /// Servicio que retorna los productos en base al ID del establecimiento
         /// </summary>
         /// <param name="idEstablecimiento">ID del establecimiento</param>
@@ -103,22 +122,23 @@ namespace CursoDominioTIC.API.Controllers
         /// <param name="id">ID del Producto</param>
         /// <param name="producto">JSON del Producto</param>
         /// <returns></returns>
-        [HttpPut("{id}")]
-        public IActionResult UpdateProducto([FromRoute] int id, [FromBody] Producto producto)
+        //[HttpPut("{id}")]
+        //[FromRoute] int id, 
+        public IActionResult UpdateProducto([FromBody] Producto producto)
         {
             try
             {
-                Producto estab = _unitOfWork.Productos.GetById(id);
-                if (estab != null)
-                {
+                //Producto estab = _unitOfWork.Productos.GetById(id);
+                //if (estab != null)
+                //{
                     if (ModelState.IsValid)
                     {
                         _unitOfWork.Productos.Update(producto);
                         _unitOfWork.Save();
-                        return Ok();
+                        return Ok(producto);
                     }
-                }
-                else return NotFound("No se encuentra el producto.");
+                //}
+                //else return NotFound("No se encuentra el producto.");
                 return BadRequest();
             }
             catch (DataException ex)

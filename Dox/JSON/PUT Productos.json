@@ -1,0 +1,12 @@
+{
+  "IdProducto": 5,
+  "Nombre": "Whopper",
+  "Descripcion": "Hamburguesa Whopper.",
+  "IdCategoria": 2,
+  "IdEstablecimiento": 2,
+  "Calificacion": 5.00,
+  "Foto": null,
+  "IdCategoriaNavigation": null,
+  "IdEstablecimientoNavigation": null,
+  "Opinion": []
+}

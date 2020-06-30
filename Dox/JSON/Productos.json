@@ -1,0 +1,38 @@
+[
+  {
+    "IdProducto": 1,
+    "Nombre": "Jr. Melt",
+    "Descripcion": "Hamburguesa Junior Melt.",
+    "IdCategoria": 2,
+    "IdEstablecimiento": 1,
+    "Calificacion": 1.00,
+    "Foto": null,
+    "IdCategoriaNavigation": null,
+    "IdEstablecimientoNavigation": null,
+    "Opinion": []
+  },
+  {
+    "IdProducto": 2,
+    "Nombre": "1/4 Lb Single",
+    "Descripcion": "Hamburguesa cuarto de libra.",
+    "IdCategoria": 2,
+    "IdEstablecimiento": 1,
+    "Calificacion": 0.00,
+    "Foto": null,
+    "IdCategoriaNavigation": null,
+    "IdEstablecimientoNavigation": null,
+    "Opinion": []
+  },
+  {
+    "IdProducto": 3,
+    "Nombre": "1/2 Lb Single",
+    "Descripcion": "Hamburguesa media libra.",
+    "IdCategoria": 2,
+    "IdEstablecimiento": 1,
+    "Calificacion": 0.00,
+    "Foto": null,
+    "IdCategoriaNavigation": null,
+    "IdEstablecimientoNavigation": null,
+    "Opinion": []
+  }
+]

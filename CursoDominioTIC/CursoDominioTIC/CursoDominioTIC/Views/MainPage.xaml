@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CursoDominioTIC.Views.MainPage">
+
+    <StackLayout Spacing="5"
+                 Padding="10"
+                 HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
+        <Label Text="Usando Layouts"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                FontAttributes="Bold" />
+
+        <Button x:Name="btnStack"
+            HorizontalOptions="FillAndExpand"
+                Text="Stack Layout"
+                Clicked="btnStack_Clicked" />
+        
+        <Button x:Name="btnGrid"
+                HorizontalOptions="FillAndExpand"
+                Text="Grid Layout"
+                Margin="0,50,0,0"
+                Clicked="btnGrid_Clicked" />
+    </StackLayout>
+
+</ContentPage>

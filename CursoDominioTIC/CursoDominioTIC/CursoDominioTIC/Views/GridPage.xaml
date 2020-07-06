@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CursoDominioTIC.Views.GridPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="5"
+                 Padding="10"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+            <Label Text="Usando Grid Layout"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                FontAttributes="Bold" />
+
+            <Grid ColumnSpacing="5"
+                  RowSpacing="5" 
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button BackgroundColor="#689CD2"
+                        Grid.Row="0"
+                        Grid.Column="0" />
+                <Button BackgroundColor="#B6D7F3"
+                        Grid.Row="0"
+                        Grid.Column="1" />
+                <Button BackgroundColor="#B6D7F3"
+                        Grid.Row="1"
+                        Grid.Column="0" />
+                <Button BackgroundColor="#689CD2"
+                        Grid.Row="1"
+                        Grid.Column="1" />
+                <Button BackgroundColor="#A9DCFB"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        x:Name="btnRegre"
+                        Clicked="btnRegre_Clicked"
+                        Text="REGRESAR" />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

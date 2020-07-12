@@ -6,14 +6,16 @@
              mc:Ignorable="d"
              x:Class="CursoDominioTIC.Views.MainPage">
 
-    <StackLayout Spacing="5"
+    <StackLayout Spacing="25"
                  Padding="10"
                  HorizontalOptions="CenterAndExpand"
                  VerticalOptions="CenterAndExpand">
+        
         <Label Text="Usando Layouts"
-                HorizontalOptions="Center"
-                HorizontalTextAlignment="Center"
-                FontAttributes="Bold" />
+               IsVisible="False"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold" />
 
         <Button x:Name="btnStack"
             HorizontalOptions="FillAndExpand"
@@ -23,8 +25,17 @@
         <Button x:Name="btnGrid"
                 HorizontalOptions="FillAndExpand"
                 Text="Grid Layout"
-                Margin="0,50,0,0"
                 Clicked="btnGrid_Clicked" />
+        
+        <Button x:Name="btnContacto"
+            HorizontalOptions="FillAndExpand"
+                Text="Formulario de Contacto"
+                Clicked="btnContacto_Clicked" />
+        
+        <Button x:Name="btnDetalle"
+                HorizontalOptions="FillAndExpand"
+                Text="Detalle de Producto"
+                Clicked="btnDetalle_Clicked" />
     </StackLayout>
 
 </ContentPage>

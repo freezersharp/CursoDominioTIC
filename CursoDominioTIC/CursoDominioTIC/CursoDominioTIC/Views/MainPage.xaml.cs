@@ -35,5 +35,10 @@ namespace CursoDominioTIC.Views
         {
             Navigation.PushModalAsync(new DetalleProductoPage());
         }
+
+        private void btnEstablecimientos_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EstablecimientosPage());
+        }
     }
 }

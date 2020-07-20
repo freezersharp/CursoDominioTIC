@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:CursoDominioTIC.ViewModels"
+             Title="Establecimientos"
+             mc:Ignorable="d"
+             x:Class="CursoDominioTIC.Views.EstablecimientosPage">
+    <ContentPage.BindingContext>
+        <local:EstablecimientosViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lst" ItemsSource="{Binding Establecimientos}"
+                     ItemTapped="lst_ItemTapped" 
+                     HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid ColumnDefinitions="3*,*" Padding="10">
+                                <Label Text="{Binding Nombre}"
+                                       FontAttributes="Bold"
+                                       Grid.Column="0"
+                                       Grid.Row="0" />
+                                <Label Text="{Binding Descripcion}"
+                                       FontAttributes="Italic"
+                                       Grid.Column="0"
+                                       Grid.Row="1" />
+                                <Label Text="{Binding Calificacion, StringFormat='Calificación&#10;{0}'}"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalOptions="CenterAndExpand"
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                       Grid.RowSpan="2" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

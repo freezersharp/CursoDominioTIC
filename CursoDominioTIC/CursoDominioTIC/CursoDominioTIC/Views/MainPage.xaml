@@ -10,8 +10,8 @@
                  Padding="10"
                  HorizontalOptions="CenterAndExpand"
                  VerticalOptions="CenterAndExpand">
-        
-        <Label Text="Usando Layouts"
+
+        <!--<Label Text="Usando Layouts"
                IsVisible="False"
                HorizontalOptions="Center"
                HorizontalTextAlignment="Center"
@@ -35,7 +35,14 @@
         <Button x:Name="btnDetalle"
                 HorizontalOptions="FillAndExpand"
                 Text="Detalle de Producto"
-                Clicked="btnDetalle_Clicked" />
+                Clicked="btnDetalle_Clicked" />-->
+
+        <Button x:Name="btnEstablecimientos"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand"
+            Text="Establecimientos"
+            Clicked="btnEstablecimientos_Clicked" />
+
     </StackLayout>
 
 </ContentPage>
